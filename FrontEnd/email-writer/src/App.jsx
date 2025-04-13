@@ -145,7 +145,7 @@ const App = () => {
           />
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             onClick={handleCopyToClipboard}
             disabled={loading}
             sx={{ mt: 2, mb: 2 }}

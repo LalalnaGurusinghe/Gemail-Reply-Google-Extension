@@ -1,0 +1,25 @@
+{
+    "name": "MailMentor",
+    "description": "AI-powered email writing assistant for Gmail",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["http://localhost:8080/*", "*://mail.google.com/*"],
+    "web_accessible_resources": [
+      {
+        "resources": ["icons/*"],
+        "matches": ["*://mail.google.com/*"]
+      }
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://mail.google.com/*"],
+        "js": ["content.js"],
+        "css": ["content.css"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_title": "Email Writer Assistant"
+    }
+  }
